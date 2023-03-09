@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Weather</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>GetMeHome</servlet-name>
+    <servlet-class>GetMeHome</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetMeHome</servlet-name>
+    <url-pattern>/getMeHome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginDao</servlet-name>
+    <servlet-class>LoginDao</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginDao</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RegisterDao</servlet-name>
+    <servlet-class>RegisterDao</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterDao</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoggedIn</servlet-name>
+    <servlet-class>LoggedIn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoggedIn</servlet-name>
+    <url-pattern>/LoggedIn</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OnLoad</servlet-name>
+    <servlet-class>OnLoad</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OnLoad</servlet-name>
+    <url-pattern>/OnLoad</url-pattern>
+  </servlet-mapping>
+  <session-config>
+   <session-timeout>15</session-timeout>
+</session-config>
+</web-app>

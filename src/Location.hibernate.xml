@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="Location" table="location">
+  <id name="cityname">
+   <column name="cityname" length="100" />
+  </id>
+   
+   <set name="user" table="relationship" cascade="save-update">
+            <key column="FK2_cityname"/>
+            <many-to-many column="FK1_username" class="User" />
+   </set>
+   
+   
+ </class>
+</hibernate-mapping>
