@@ -47,7 +47,7 @@ public class SearchLocation extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String city = request.getParameter("city");
 		int flag=0;
-    	String key = "ab70a823278ee4d36883c622a43524c9";
+    	String key = "keyasd";
     	OWM owm = new OWM(key);
     	CurrentWeather cwd;
     	Weather myWeather=new Weather();
